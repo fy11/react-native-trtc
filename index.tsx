@@ -47,7 +47,7 @@ export default {
     RNModule.stopLocalPreview()
   },
   setLocalViewFillMode(mod:Number):void{
-    RNModule.setLocalViewFillMode()
+    RNModule.setLocalViewFillMode(mod)
   },
   setRemoteViewFillMode(userId:String,mod:Number):void{
     RNModule.setRemoteViewFillMode(userId, mod)
