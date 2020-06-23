@@ -162,6 +162,17 @@ public class RNTRTCModule extends ReactContextBaseJavaModule  implements  Lifecy
   }
 
   @ReactMethod
+  public void setLocalViewFillMode(int mod) {
+    mEngine.setLocalViewFillMode(mod);
+  }
+
+  @ReactMethod
+  public void setRemoteViewFillMode (String userId, int mode) {
+    mEngine.setRemoteViewFillMode(userId, mode);
+  }
+
+
+  @ReactMethod
   public void stopLocalPreview() {
     mEngine.stopLocalPreview();
   }

@@ -46,6 +46,12 @@ export default {
   stopLocalPreview():void{
     RNModule.stopLocalPreview()
   },
+  setLocalViewFillMode(mod:Number):void{
+    RNModule.setLocalViewFillMode()
+  },
+  setRemoteViewFillMode(userId:String,mod:Number):void{
+    RNModule.setRemoteViewFillMode(userId, mod)
+  },
   startLocalAudio():void{
     RNModule.startLocalAudio()
   },
