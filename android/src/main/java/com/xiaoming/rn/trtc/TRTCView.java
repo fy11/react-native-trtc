@@ -70,6 +70,8 @@ public class TRTCView extends FrameLayout implements LifecycleEventListener {
         }
         if(userId.equals("")){
             mEngine.setLocalViewFillMode(TRTCCloudDef.TRTC_VIDEO_RENDER_MODE_FILL);
+            // mEngine.stopLocalPreview();
+            mEngine.startLocalAudio();
             mEngine.startLocalPreview(frontCamera,mLocalView);
         }else{
             mEngine.setRemoteViewFillMode(userId, TRTCCloudDef.TRTC_VIDEO_RENDER_MODE_FILL);
@@ -82,7 +84,7 @@ public class TRTCView extends FrameLayout implements LifecycleEventListener {
             return ;
         }
         if(userId.equals("")){
-//            mEngine.stopLocalPreview();
+            // mEngine.stopLocalPreview();
         }else{
             mEngine.stopRemoteView(userId);
         }
